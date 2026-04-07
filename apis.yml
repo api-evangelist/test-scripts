@@ -1,13 +1,11 @@
 name: Test Scripts
-description: Automated scripts used to verify software functionality, validate code
-  behavior, and ensure quality through repeatable testing procedures. It supports
-  the full software development lifecycle from design through deployment and maintenance.
+description: Automated scripts used to verify software functionality, validate code behavior, and ensure quality through repeatable testing procedures. It supports the full software development lifecycle from design through deployment and maintenance.
 url: https://en.wikipedia.org/wiki/Test_automation
 tags:
-- Testing
-- Automation
-- Quality Assurance
-- Software Development
+  - Automation
+  - Quality Assurance
+  - Software Development
+  - Testing
 created: '2025'
 modified: '2026-03-16'
 apis: []
