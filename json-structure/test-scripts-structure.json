@@ -1,0 +1,96 @@
+{
+  "title": "Test Script Structure",
+  "description": "Structural documentation for automated test scripts used in API quality assurance.",
+  "type": "object",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "required": true,
+      "description": "Unique identifier for the test script."
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "required": true,
+      "description": "Human-readable name."
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "required": false,
+      "description": "Detailed description of what the script validates."
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": true,
+      "enum": ["unit", "integration", "end-to-end", "contract", "performance", "security", "smoke", "regression"],
+      "description": "Test category."
+    },
+    {
+      "name": "framework",
+      "type": "string",
+      "required": false,
+      "description": "Testing framework (Postman, Karate, Playwright, k6, etc.)."
+    },
+    {
+      "name": "language",
+      "type": "string",
+      "required": false,
+      "description": "Script programming language."
+    },
+    {
+      "name": "target",
+      "type": "object",
+      "required": true,
+      "description": "The API or endpoint under test.",
+      "fields": [
+        { "name": "url", "type": "string", "format": "uri", "required": true },
+        { "name": "method", "type": "string", "required": false },
+        { "name": "path", "type": "string", "required": false },
+        { "name": "operationId", "type": "string", "required": false }
+      ]
+    },
+    {
+      "name": "assertions",
+      "type": "array",
+      "required": false,
+      "description": "Assertions validated by the script.",
+      "items": {
+        "type": "object",
+        "fields": [
+          { "name": "type", "type": "string", "required": true },
+          { "name": "description", "type": "string", "required": true },
+          { "name": "expected", "type": "any", "required": false }
+        ]
+      }
+    },
+    {
+      "name": "tags",
+      "type": "array",
+      "required": false,
+      "description": "Classification labels."
+    },
+    {
+      "name": "environment",
+      "type": "string",
+      "required": false,
+      "enum": ["development", "staging", "production", "ci"],
+      "description": "Target environment."
+    },
+    {
+      "name": "ci",
+      "type": "object",
+      "required": false,
+      "description": "CI/CD integration details.",
+      "fields": [
+        { "name": "platform", "type": "string", "required": false },
+        { "name": "workflow", "type": "string", "required": false },
+        { "name": "trigger", "type": "string", "required": false }
+      ]
+    },
+    { "name": "created", "type": "string", "format": "date", "required": false },
+    { "name": "modified", "type": "string", "format": "date", "required": false }
+  ]
+}

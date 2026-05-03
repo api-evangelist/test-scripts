@@ -1,0 +1,72 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "ts": "https://raw.githubusercontent.com/api-evangelist/test-scripts/main/vocabulary/test-scripts-vocabulary.yml#",
+
+    "TestScript": {
+      "@id": "ts:TestScript",
+      "@type": "@id"
+    },
+    "Assertion": {
+      "@id": "ts:Assertion",
+      "@type": "@id"
+    },
+    "TestTarget": {
+      "@id": "ts:TestTarget",
+      "@type": "@id"
+    },
+
+    "id": "@id",
+    "name": "schema:name",
+    "description": "schema:description",
+    "created": {
+      "@id": "schema:dateCreated",
+      "@type": "xsd:date"
+    },
+    "modified": {
+      "@id": "schema:dateModified",
+      "@type": "xsd:date"
+    },
+    "tags": "schema:keywords",
+
+    "type": {
+      "@id": "ts:testType",
+      "@type": "@id"
+    },
+    "framework": "ts:framework",
+    "language": "schema:programmingLanguage",
+    "target": {
+      "@id": "ts:target",
+      "@type": "@id"
+    },
+    "assertions": {
+      "@id": "ts:assertions",
+      "@container": "@set"
+    },
+    "environment": "ts:environment",
+    "ci": {
+      "@id": "ts:ciIntegration",
+      "@type": "@id"
+    },
+
+    "url": "schema:url",
+    "method": "ts:httpMethod",
+    "path": "ts:apiPath",
+    "operationId": "ts:operationId",
+
+    "platform": "ts:ciPlatform",
+    "workflow": "ts:ciWorkflow",
+    "trigger": "ts:ciTrigger",
+
+    "UnitTest": "ts:UnitTest",
+    "IntegrationTest": "ts:IntegrationTest",
+    "EndToEndTest": "ts:EndToEndTest",
+    "ContractTest": "ts:ContractTest",
+    "PerformanceTest": "ts:PerformanceTest",
+    "SecurityTest": "ts:SecurityTest",
+    "SmokeTest": "ts:SmokeTest",
+    "RegressionTest": "ts:RegressionTest"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "ts-contract-users-list-001",
+  "name": "Verify GET /users Returns 200 with User Array",
+  "description": "Contract test verifying that GET /users responds with HTTP 200 and a JSON array of user objects matching the OpenAPI schema.",
+  "type": "contract",
+  "framework": "Dredd",
+  "language": "JavaScript",
+  "target": {
+    "url": "https://api.example.com",
+    "method": "GET",
+    "path": "/users",
+    "operationId": "listUsers"
+  },
+  "assertions": [
+    {
+      "type": "status-code",
+      "description": "Response status code is 200 OK",
+      "expected": 200
+    },
+    {
+      "type": "header",
+      "description": "Content-Type header is application/json",
+      "expected": "application/json"
+    },
+    {
+      "type": "schema",
+      "description": "Response body matches OpenAPI components/schemas/UserList schema",
+      "expected": "#/components/schemas/UserList"
+    },
+    {
+      "type": "response-time",
+      "description": "Response time is under 500ms",
+      "expected": 500
+    }
+  ],
+  "tags": ["Contract Testing", "Users", "GET", "Smoke"],
+  "environment": "staging",
+  "ci": {
+    "platform": "GitHub Actions",
+    "workflow": "api-contract-tests",
+    "trigger": "pull_request"
+  },
+  "created": "2026-05-03",
+  "modified": "2026-05-03"
+}

@@ -1,0 +1,40 @@
+{
+  "id": "ts-perf-search-001",
+  "name": "Load Test: Search API Under 100 Concurrent Users",
+  "description": "k6 performance test script validating the search API handles 100 concurrent virtual users with p95 response time under 1 second.",
+  "type": "performance",
+  "framework": "k6",
+  "language": "JavaScript",
+  "target": {
+    "url": "https://api.example.com",
+    "method": "GET",
+    "path": "/search",
+    "operationId": "searchRecords"
+  },
+  "assertions": [
+    {
+      "type": "status-code",
+      "description": "99% of requests return 200",
+      "expected": 200
+    },
+    {
+      "type": "response-time",
+      "description": "p95 response time is under 1000ms",
+      "expected": 1000
+    },
+    {
+      "type": "value",
+      "description": "Error rate below 1%",
+      "expected": 0.01
+    }
+  ],
+  "tags": ["Load Testing", "Performance", "Search", "k6"],
+  "environment": "staging",
+  "ci": {
+    "platform": "GitHub Actions",
+    "workflow": "performance-tests",
+    "trigger": "schedule"
+  },
+  "created": "2026-05-03",
+  "modified": "2026-05-03"
+}

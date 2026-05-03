@@ -1,0 +1,121 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/test-scripts/main/json-schema/test-scripts-schema.json",
+  "title": "Test Script",
+  "description": "Schema representing an automated test script used to verify API behavior, validate code, and ensure software quality.",
+  "type": "object",
+  "required": ["id", "name", "type", "target"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the test script."
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable name of the test script."
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of what the test script validates."
+    },
+    "type": {
+      "type": "string",
+      "enum": ["unit", "integration", "end-to-end", "contract", "performance", "security", "smoke", "regression"],
+      "description": "Category of test the script performs."
+    },
+    "framework": {
+      "type": "string",
+      "description": "Testing framework used to execute the script (e.g., Postman, Karate, Playwright, k6)."
+    },
+    "language": {
+      "type": "string",
+      "description": "Programming language the test script is written in."
+    },
+    "target": {
+      "type": "object",
+      "description": "The API or endpoint this script targets.",
+      "required": ["url"],
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Base URL of the API under test."
+        },
+        "method": {
+          "type": "string",
+          "enum": ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"],
+          "description": "HTTP method exercised by this script."
+        },
+        "path": {
+          "type": "string",
+          "description": "API path under test."
+        },
+        "operationId": {
+          "type": "string",
+          "description": "OpenAPI operationId this script targets."
+        }
+      }
+    },
+    "assertions": {
+      "type": "array",
+      "description": "List of assertions the script checks.",
+      "items": {
+        "type": "object",
+        "required": ["type", "description"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["status-code", "response-time", "header", "body", "schema", "value"],
+            "description": "Type of assertion."
+          },
+          "description": {
+            "type": "string",
+            "description": "Human-readable description of what is being asserted."
+          },
+          "expected": {
+            "description": "Expected value for the assertion."
+          }
+        }
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Labels for categorizing and filtering test scripts."
+    },
+    "environment": {
+      "type": "string",
+      "enum": ["development", "staging", "production", "ci"],
+      "description": "Environment the script is designed to run in."
+    },
+    "ci": {
+      "type": "object",
+      "description": "CI/CD integration configuration.",
+      "properties": {
+        "platform": {
+          "type": "string",
+          "description": "CI/CD platform (e.g., GitHub Actions, Jenkins, GitLab CI)."
+        },
+        "workflow": {
+          "type": "string",
+          "description": "Workflow or pipeline name that runs this script."
+        },
+        "trigger": {
+          "type": "string",
+          "enum": ["push", "pull_request", "schedule", "manual"],
+          "description": "Event that triggers script execution."
+        }
+      }
+    },
+    "created": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the test script was created."
+    },
+    "modified": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the test script was last modified."
+    }
+  }
+}

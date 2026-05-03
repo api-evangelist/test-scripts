@@ -1,0 +1,138 @@
+name: Test Scripts Vocabulary
+description: >-
+  Vocabulary of terms, concepts, and classifications used in the domain of
+  automated test scripting for APIs and software systems.
+url: https://github.com/api-evangelist/test-scripts
+tags:
+  - Automation
+  - Quality Assurance
+  - Testing
+created: '2026-05-03'
+modified: '2026-05-03'
+
+terms:
+  - term: Test Script
+    definition: >-
+      An executable file or set of instructions that automates the validation of
+      software behavior. Test scripts encode test logic in a programming language
+      or DSL and can be executed repeatedly across environments and CI/CD pipelines.
+    tags:
+      - Core Concept
+
+  - term: Assertion
+    definition: >-
+      A statement within a test script that verifies an expected outcome. Assertions
+      check status codes, response bodies, response times, headers, and schema
+      compliance. A failed assertion marks the test as failed.
+    tags:
+      - Testing
+
+  - term: Test Framework
+    definition: >-
+      A structured set of guidelines, tools, and libraries that govern how test
+      scripts are organized, executed, and reported. Common API testing frameworks
+      include Karate, REST Assured, Postman/Newman, Playwright, and Cypress.
+    tags:
+      - Framework
+
+  - term: Contract Test
+    definition: >-
+      A test that verifies an API implementation matches its documented specification
+      (e.g., OpenAPI). Contract tests ensure producers and consumers of an API
+      agree on the interface contract.
+    tags:
+      - Contract Testing
+
+  - term: Unit Test
+    definition: >-
+      A test that validates a single, isolated function or component in isolation
+      from its dependencies, typically using mocks or stubs for external services.
+    tags:
+      - Testing
+
+  - term: Integration Test
+    definition: >-
+      A test that verifies multiple components interact correctly. For APIs, integration
+      tests send real HTTP requests to a running service and validate end-to-end
+      request/response behavior.
+    tags:
+      - Testing
+
+  - term: End-to-End Test
+    definition: >-
+      A test that exercises a complete user workflow across multiple systems and
+      APIs. End-to-end tests simulate real-world usage scenarios from start to finish.
+    tags:
+      - Testing
+
+  - term: Performance Test
+    definition: >-
+      A test script that measures API throughput, latency, and error rates under
+      simulated load. Tools such as k6, JMeter, Gatling, and Artillery execute
+      performance test scripts with configurable virtual user counts and ramp-up patterns.
+    tags:
+      - Performance Testing
+
+  - term: Smoke Test
+    definition: >-
+      A minimal set of test scripts run after deployment to verify that core API
+      endpoints are responsive and returning expected results. Smoke tests provide
+      rapid confidence that a release is viable before deeper testing.
+    tags:
+      - Testing
+
+  - term: Regression Test
+    definition: >-
+      A test script that re-runs previously passing scenarios to verify that new
+      code changes have not introduced unexpected breakage in existing functionality.
+    tags:
+      - Testing
+
+  - term: Security Test
+    definition: >-
+      A test script targeting authentication, authorization, input validation,
+      and vulnerability detection. Security test tools include OWASP ZAP, Nuclei,
+      and StackHawk, which execute automated security scripts against running APIs.
+    tags:
+      - Security
+
+  - term: Data-Driven Testing
+    definition: >-
+      An approach where a single test script is executed multiple times with different
+      input datasets. The test logic is parameterized so that test cases are generated
+      from external data sources (CSV, JSON, or environment variables).
+    tags:
+      - Methodology
+
+  - term: CI/CD Integration
+    definition: >-
+      The practice of running test scripts automatically as part of a continuous
+      integration or delivery pipeline. Triggered by code pushes, pull requests,
+      or on a schedule, CI integration ensures tests run consistently without manual
+      intervention.
+    tags:
+      - CI/CD
+
+  - term: Test Runner
+    definition: >-
+      The executable process that reads test scripts and orchestrates their execution,
+      collecting results and reporting pass/fail outcomes. Newman (for Postman), Jest,
+      Mocha, and pytest are common test runner tools.
+    tags:
+      - Tooling
+
+  - term: Fixture
+    definition: >-
+      Predefined data or state set up before test script execution to ensure
+      repeatable, deterministic test results. Fixtures may include seed data,
+      mock server responses, or pre-configured environment variables.
+    tags:
+      - Testing
+
+  - term: Mock Server
+    definition: >-
+      A simulated API server that returns predefined responses to test script requests.
+      Mock servers enable testing of consumer code without depending on live API
+      availability, using tools such as WireMock, Mockoon, and Hoverfly.
+    tags:
+      - Tooling
