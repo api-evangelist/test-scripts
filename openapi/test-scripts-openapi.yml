@@ -1,0 +1,97 @@
+openapi: 3.1.0
+info:
+  title: Postman API (Test Scripts)
+  description: >-
+    Subset of the Postman API used to manage collections, environments,
+    monitors, and mock servers that contain Postman test scripts. The Postman
+    API base URL is https://api.getpostman.com and authentication is performed
+    via the X-Api-Key request header.
+  version: "v1"
+  contact:
+    name: Postman API
+    url: https://learning.postman.com/docs/introduction/overview/
+servers:
+  - url: https://api.getpostman.com
+security:
+  - apiKey: []
+paths:
+  /collections:
+    get:
+      summary: List collections
+      operationId: listCollections
+      responses:
+        '200':
+          description: Collections listed.
+    post:
+      summary: Create a collection (containing test scripts)
+      operationId: createCollection
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                collection:
+                  type: object
+      responses:
+        '200':
+          description: Collection created.
+  /collections/{collection_uid}:
+    get:
+      summary: Get a collection
+      operationId: getCollection
+      parameters:
+        - name: collection_uid
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Collection returned.
+    put:
+      summary: Update a collection
+      operationId: updateCollection
+      parameters:
+        - name: collection_uid
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Collection updated.
+  /environments:
+    get:
+      summary: List environments
+      operationId: listEnvironments
+      responses:
+        '200':
+          description: Environments listed.
+  /monitors:
+    get:
+      summary: List monitors (scheduled test script runs)
+      operationId: listMonitors
+      responses:
+        '200':
+          description: Monitors listed.
+  /mocks:
+    get:
+      summary: List mock servers
+      operationId: listMocks
+      responses:
+        '200':
+          description: Mock servers listed.
+components:
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-Api-Key
