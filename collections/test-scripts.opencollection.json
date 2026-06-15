@@ -1,0 +1,117 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Postman API (Test Scripts)",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-Api-Key",
+      "value": "{{X-Api-Key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "List collections",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.getpostman.com/collections"
+      },
+      "docs": "List collections"
+    },
+    {
+      "info": {
+        "name": "Create a collection (containing test scripts)",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.getpostman.com/collections",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create a collection (containing test scripts)"
+    },
+    {
+      "info": {
+        "name": "Get a collection",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.getpostman.com/collections/:collection_uid",
+        "params": [
+          {
+            "name": "collection_uid",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get a collection"
+    },
+    {
+      "info": {
+        "name": "Update a collection",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://api.getpostman.com/collections/:collection_uid",
+        "params": [
+          {
+            "name": "collection_uid",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Update a collection"
+    },
+    {
+      "info": {
+        "name": "List environments",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.getpostman.com/environments"
+      },
+      "docs": "List environments"
+    },
+    {
+      "info": {
+        "name": "List monitors (scheduled test script runs)",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.getpostman.com/monitors"
+      },
+      "docs": "List monitors (scheduled test script runs)"
+    },
+    {
+      "info": {
+        "name": "List mock servers",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.getpostman.com/mocks"
+      },
+      "docs": "List mock servers"
+    }
+  ],
+  "bundled": true
+}
