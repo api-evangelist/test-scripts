@@ -193,6 +193,14 @@ apis:
     url: https://github.com/schemathesis/schemathesis
 
 common:
+- type: TrustCenter
+  url: security/test-scripts-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/test-scripts-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/test-scripts-domain-security.yml
+- type: Authentication
+  url: authentication/test-scripts-authentication.yml
 - type: GitHubOrg
   url: https://github.com/api-evangelist/test-scripts
 - type: JSONSchema
