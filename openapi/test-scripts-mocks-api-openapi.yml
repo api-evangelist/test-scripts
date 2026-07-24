@@ -1,0 +1,30 @@
+openapi: 3.1.0
+info:
+  title: Postman API (Test Scripts) Collections Mocks API
+  description: Subset of the Postman API used to manage collections, environments, monitors, and mock servers that contain Postman test scripts. The Postman API base URL is https://api.getpostman.com and authentication is performed via the X-Api-Key request header.
+  version: v1
+  contact:
+    name: Postman API
+    url: https://learning.postman.com/docs/introduction/overview/
+servers:
+- url: https://api.getpostman.com
+security:
+- apiKey: []
+tags:
+- name: Mocks
+paths:
+  /mocks:
+    get:
+      summary: List mock servers
+      operationId: listMocks
+      responses:
+        '200':
+          description: Mock servers listed.
+      tags:
+      - Mocks
+components:
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-Api-Key
