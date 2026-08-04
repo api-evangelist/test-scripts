@@ -1,0 +1,20 @@
+{
+  "provider": "test-scripts",
+  "sources": [
+    "test-scripts-collections-api-openapi.yml",
+    "test-scripts-environments-api-openapi.yml",
+    "test-scripts-mocks-api-openapi.yml",
+    "test-scripts-monitors-api-openapi.yml"
+  ],
+  "outputs": [
+    "test-scripts-collections-api-openapi.yml",
+    "test-scripts-environments-api-openapi.yml",
+    "test-scripts-mocks-api-openapi.yml",
+    "test-scripts-monitors-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
