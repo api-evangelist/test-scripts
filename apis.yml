@@ -144,6 +144,8 @@ apis:
     humanURL: https://www.postman.com/postman/postman-public-workspace/
     baseURL: https://api.getpostman.com
     tags:
+      - Collection
+    tags_raw:
       - Collections
     properties:
       - type: OpenAPI
