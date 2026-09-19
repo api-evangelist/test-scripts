@@ -180,6 +180,8 @@ apis:
     humanURL: https://www.postman.com/postman/postman-public-workspace/
     baseURL: https://api.getpostman.com
     tags:
+      - Environment
+    tags_raw:
       - Environments
     properties:
       - type: OpenAPI
