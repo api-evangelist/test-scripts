@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Postman API (Test Scripts) Collections Monitors API
+  title: Postman API (Test Scripts) Monitors API
   description: Subset of the Postman API used to manage collections, environments, monitors, and mock servers that contain Postman test scripts. The Postman API base URL is https://api.getpostman.com and authentication is performed via the X-Api-Key request header.
   version: v1
   contact:

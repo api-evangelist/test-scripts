@@ -1,10 +1,7 @@
 {
   "provider": "test-scripts",
   "sources": [
-    "test-scripts-collections-api-openapi.yml",
-    "test-scripts-environments-api-openapi.yml",
-    "test-scripts-mocks-api-openapi.yml",
-    "test-scripts-monitors-api-openapi.yml"
+    "_original/test-scripts-openapi.yml"
   ],
   "outputs": [
     "test-scripts-collections-api-openapi.yml",
@@ -16,11 +13,25 @@
   "errors": [],
   "warnings": [],
   "notes": [
-    "test-scripts-collections-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "test-scripts-environments-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "test-scripts-mocks-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "test-scripts-monitors-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "test-scripts-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "test-scripts-openapi.yml: tagged paths GET /collections -> Collections",
+    "test-scripts-openapi.yml: tagged paths POST /collections -> Collections",
+    "test-scripts-openapi.yml: tagged paths GET /collections/{collection_uid} -> Collections",
+    "test-scripts-openapi.yml: tagged paths PUT /collections/{collection_uid} -> Collections",
+    "test-scripts-openapi.yml: tagged paths GET /environments -> Environments",
+    "test-scripts-openapi.yml: tagged paths GET /monitors -> Monitors",
+    "test-scripts-openapi.yml: tagged paths GET /mocks -> Mocks",
+    "test-scripts-openapi.yml: declared missing tag: Collections",
+    "test-scripts-openapi.yml: declared missing tag: Environments",
+    "test-scripts-openapi.yml: declared missing tag: Mocks",
+    "test-scripts-openapi.yml: declared missing tag: Monitors",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "test-scripts-collections-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "test-scripts-environments-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "test-scripts-mocks-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "test-scripts-monitors-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
