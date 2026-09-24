@@ -26,6 +26,7 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/test-scripts.png
 name: Test Scripts
+kind: topic
 # x-type: concept -- a software-testing CONCEPT, not a company (roadmap#362). Same class as
 # devops/mvc/waterfall/sdlc, which roadmap#258 already typed; this family was missed because
 # the sweep went by name and these read as products. Found via #258's own tell instead: the
@@ -170,8 +171,6 @@ apis:
         url: openapi/test-scripts-collections-api-openapi.yml
       - type: Documentation
         url: https://learning.postman.com/docs/introduction/overview/
-      - type: GraphQL
-        url: graphql/test-scripts-graphql.md
       - type: Documentation
         url: https://grafana.com/docs/k6/latest/
   - aid: test-scripts:test-scripts-environments-api
@@ -188,8 +187,6 @@ apis:
         url: openapi/test-scripts-environments-api-openapi.yml
       - type: Documentation
         url: https://learning.postman.com/docs/introduction/overview/
-      - type: GraphQL
-        url: graphql/test-scripts-graphql.md
       - type: Documentation
         url: https://grafana.com/docs/k6/latest/
   - aid: test-scripts:test-scripts-mocks-api
@@ -204,8 +201,6 @@ apis:
         url: openapi/test-scripts-mocks-api-openapi.yml
       - type: Documentation
         url: https://learning.postman.com/docs/introduction/overview/
-      - type: GraphQL
-        url: graphql/test-scripts-graphql.md
       - type: Documentation
         url: https://grafana.com/docs/k6/latest/
   - aid: test-scripts:test-scripts-monitors-api
@@ -220,8 +215,6 @@ apis:
         url: openapi/test-scripts-monitors-api-openapi.yml
       - type: Documentation
         url: https://learning.postman.com/docs/introduction/overview/
-      - type: GraphQL
-        url: graphql/test-scripts-graphql.md
       - type: Documentation
         url: https://grafana.com/docs/k6/latest/
   - name: Cypress
