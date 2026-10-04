@@ -1,0 +1,24 @@
+slug: test-scripts
+provider: Test Scripts
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 1
+edges:
+- tag: Collections
+  spec_file: test-scripts-collections-api-openapi.yml
+  capability_id: BC-4200.50
+  capability_id_l1: BC-4200
+  capability_name: Software Quality Engineering
+  confidence: 0.78
+  evidence: POST /collections  createCollection  Create a collection (containing test scripts)
+  reason: Operations manage Postman collections that hold automated test scripts — stewardship of automated
+    test suites, i.e. software quality engineering.

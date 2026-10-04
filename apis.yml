@@ -237,6 +237,9 @@ apis:
         url: https://github.com/cypress-io/cypress
 
 common:
+  - type: CapabilityMap
+    url: capabilities/test-scripts-capability-edges.yml
+    name: Test Scripts Business Capability Map
   - type: AgenticAccess
     url: agentic-access/test-scripts-agentic-access.yml
   - type: TrustCenter
