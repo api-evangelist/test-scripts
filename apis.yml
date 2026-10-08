@@ -237,6 +237,12 @@ apis:
         url: https://github.com/cypress-io/cypress
 
 common:
+  - type: Plans
+    url: plans/test-scripts-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/test-scripts-rate-limits.yml
+  - type: FinOps
+    url: finops/test-scripts-finops.yml
   - type: CapabilityMap
     url: capabilities/test-scripts-capability-edges.yml
     name: Test Scripts Business Capability Map
